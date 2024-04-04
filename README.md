@@ -1,7 +1,5 @@
 # Youtube-Script-Extractor-Demo
 
-<br/>
-
 ## Table of Contents 목차
 
 1. [Project Introduction 프로젝트 소개](#📖-Project-Introduction-프로젝트-소개)
