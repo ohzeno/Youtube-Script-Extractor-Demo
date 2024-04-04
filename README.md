@@ -11,9 +11,9 @@
 
 <br/>
 
-## 📖 Project Introduction 프로젝트 소개
+## :book: Project Introduction 프로젝트 소개
 
-### [🏠 Download 다운로드](#https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)
+### [:house: Download 다운로드](#https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)
 
 This is a Chrome extension (ManifestV3) that allows you to extract subtitles, including chapter titles, from YouTube videos. Unlike other extensions, the subtitles are not truncated even if they are long, and if the video has chapter titles, they are extracted along with the subtitles. You can choose whether to include timestamps and line breaks, and with a single click, you can copy the subtitles to the clipboard or download them as a TXT file.
 
@@ -21,7 +21,7 @@ This is a Chrome extension (ManifestV3) that allows you to extract subtitles, in
 
 <br/>
 
-## 🚩 Key Features 주요 기능
+## :triangular_flag_on_post: Key Features 주요 기능
 
 - Extract chapter titles along with subtitles if they exist (unique feature of this extension)
 
@@ -53,7 +53,7 @@ The purpose of this repository is to explore the program structure. This reposit
 
 <br/>
 
-## 🚩 Technology Stack 기술 스택
+## :triangular_flag_on_post: Technology Stack 기술 스택
 
 - TypeScript
 
@@ -61,7 +61,7 @@ The purpose of this repository is to explore the program structure. This reposit
 
 <br/>
 
-## 📢 Notice 알림
+## :loudspeaker: Notice 알림
 
 - This program may cease to function due to changes in the YouTube system.
 
