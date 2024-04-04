@@ -2,12 +2,12 @@
 
 ## Table of Contents 목차
 
-1. [Project Introduction 프로젝트 소개](#📖-Project-Introduction-프로젝트-소개)
-   1. [Download 다운로드](#🏠-Download-다운로드)
+1. [Project Introduction 프로젝트 소개](#book-Project-Introduction-프로젝트-소개)
+   1. [Download 다운로드](#house-Download-다운로드)
 
-2. [Key Features 주요 기능](#🚩-Key-Features-주요-기능)
-3. [Technology Stack 기술 스택](#🚩-Technology-Stack-기술-스택)
-4. [Notice 알림](#📢-Notice-알림)
+2. [Key Features 주요 기능](#triangular_flag_on_post-Key-Features-주요-기능)
+3. [Technology Stack 기술 스택](#triangular_flag_on_post-Technology-Stack-기술-스택)
+4. [Notice 알림](#loudspeaker-Notice-알림)
 
 <br/>
 
