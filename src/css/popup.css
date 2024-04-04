@@ -1,0 +1,51 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 15px;
+}
+
+.container {
+  padding: 1rem;
+  width: 150px;
+}
+
+.options {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  padding: 0px 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 0 10px;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.button img {
+  width: 20px;
+  height: 20px;
+}
+
+#notification {
+  background-color: #285a67;
+  color: white;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
