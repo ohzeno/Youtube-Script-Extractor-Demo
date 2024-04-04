@@ -13,7 +13,7 @@
 
 ## :book: Project Introduction 프로젝트 소개
 
-### [:house: Download 다운로드](#https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)
+### [:house: Download 다운로드](https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)
 
 This is a Chrome extension (ManifestV3) that allows you to extract subtitles, including chapter titles, from YouTube videos. Unlike other extensions, the subtitles are not truncated even if they are long, and if the video has chapter titles, they are extracted along with the subtitles. You can choose whether to include timestamps and line breaks, and with a single click, you can copy the subtitles to the clipboard or download them as a TXT file.
 
@@ -43,11 +43,11 @@ This is a Chrome extension (ManifestV3) that allows you to extract subtitles, in
 
   한 번의 클릭으로 자막을 TXT파일로 다운로드
 
-Please visit the [Chrome Web Store](#https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6) to check the actual functionality.
+Please visit the [Chrome Web Store](https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6) to check the actual functionality.
 
 The purpose of this repository is to explore the program structure. This repository does not function as it is because sensitive modules, interfaces, types, etc., have been removed.
 
-실제 기능을 확인하려면 [Chrome 웹 스토어](#https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)를 방문하세요.
+실제 기능을 확인하려면 [Chrome 웹 스토어](https://chromewebstore.google.com/detail/youtube-script-extractor/jcabnnjnoeeiblfhdponchmlkoocekbo?hl=ko&authuser=6)를 방문하세요.
 
 이 저장소의 목적은 프로그램 구조를 살펴보는 것입니다. 민감한 모듈, 인터페이스, 타입 등이 제거되었기 때문에 이 저장소의 프로그램은 작동하지 않습니다.
 
