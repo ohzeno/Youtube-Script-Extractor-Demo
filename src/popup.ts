@@ -34,4 +34,4 @@ async function initializeApp() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initializeApp);
+initializeApp();
