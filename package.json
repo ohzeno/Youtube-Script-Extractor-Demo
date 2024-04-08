@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "build": "rimraf dist/js/ && cp -r src/images dist/ && cp manifest.json dist/ && cp src/html/popup.html dist/ && cp src/css/popup.css dist/ && webpack"
+    "build": "mkdirp dist/ && rimraf dist/js/ && cp -r src/images dist/ && cp manifest.json dist/ && cp src/html/popup.html dist/ && cp src/css/popup.css dist/ && webpack"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.263",
+    "mkdirp": "^3.0.1",
     "rimraf": "^5.0.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.3",
