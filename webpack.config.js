@@ -1,7 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development", // 또는 'production'
+  mode: "development",
+  // mode: "production",
   devtool: "source-map", // eval()은 CSP 위반이라 source-map을 사용
   entry: {
     content: "./src/content.ts",

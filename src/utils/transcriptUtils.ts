@@ -86,6 +86,10 @@ async function getFullscriptData(
 ): Promise<{ title: string; fullScript: string }> {
   const videoUrl: string = await getPageUrl();
   const transcriptDict = await getTranscriptDict(videoUrl);
+  if (transcriptDict.transcript.length === 0) {
+    showNotification("No transcript available.");
+    return { title: "", fullScript: "" };
+  }
   const fullScript = await processTranscript(transcriptDict, checkboxes);
   const timestamp = checkboxes["timestamp"].checked;
   const lineBreak = checkboxes["line-break"].checked;
@@ -100,6 +104,7 @@ export async function copyTranscript(
   checkboxes: InputElementDict
 ): Promise<void> {
   const { fullScript } = await getFullscriptData(checkboxes);
+  if (!fullScript) return;
   navigator.clipboard
     .writeText(fullScript)
     .then(() => {
@@ -114,6 +119,7 @@ export async function downloadTranscript(
   checkboxes: InputElementDict
 ): Promise<void> {
   const { title, fullScript } = await getFullscriptData(checkboxes);
+  if (!fullScript) return;
   const blob = new Blob([fullScript], { type: "text/plain" });
   const url = URL.createObjectURL(blob); // Blob 객체를 가리키는 URL 생성
   const a = document.createElement("a"); // a 태그 생성

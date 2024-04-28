@@ -17,6 +17,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 async function getTranscriptDict(): Promise<TranscriptDict> {
   const { title, initialData } = await getInitialData();
   const initialSegments = await getInitialSegments(initialData);
+  if (initialSegments.length === 0) return { title, transcript: [] };
   let sectionNumber = 1;
   const transcript = [];
   for (const item of initialSegments) {

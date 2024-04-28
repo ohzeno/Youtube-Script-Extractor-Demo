@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Script Extractor",
-  "version": "1.0",
+  "version": "1.0.2",
   "description": "Extract YouTube subtitles, including section titles, with one click and copy them to the clipboard or download as a TXT file.",
   "permissions": ["activeTab", "storage", "clipboardWrite", "alarms"],
   "content_security_policy": {

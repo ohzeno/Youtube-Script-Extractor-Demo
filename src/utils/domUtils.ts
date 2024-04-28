@@ -12,6 +12,7 @@ export function showNotification(
   duration: number = 3500
 ): void {
   const notificationElement = document.getElementById("notification");
+  if (notificationElement.style.display === "block") return;
   notificationElement.innerText = message;
   notificationElement.style.display = "block";
 
