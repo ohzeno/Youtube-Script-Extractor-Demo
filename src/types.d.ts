@@ -10,3 +10,7 @@ interface InputElementDict {
 interface ButtonElementDict {
   [key: string]: HTMLButtonElement;
 }
+
+interface NotificationElement extends HTMLElement {
+  timeoutId?: number;
+}

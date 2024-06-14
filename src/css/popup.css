@@ -43,9 +43,21 @@ html {
 }
 
 #notification {
-  background-color: #285a67;
-  color: white;
+  color: white; /* 기본 텍스트 색상 */
   padding: 16px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: none; /* 초기 상태를 숨김으로 설정 */
+}
+
+.notification-default {
+  background-color: #285a67;
+}
+
+.notification-error {
+  background-color: #d32f2f;
+}
+
+.notification-warning {
+  background-color: #c57f28;
 }
