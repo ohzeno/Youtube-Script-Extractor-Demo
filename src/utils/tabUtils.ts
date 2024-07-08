@@ -24,7 +24,7 @@ export async function validatePage(
   buttons: ButtonElementDict
 ): Promise<boolean> {
   const pageUrl: string = await getPageUrl();
-  const pattern = /^https?:\/\/(?:www\.)?youtube\.com\/watch/;
+  const pattern = /^https?:\/\/(?:www\.)?youtube\.com\/(?:watch|live)/;
   if (pattern.test(pageUrl)) return true;
   for (const key in checkboxes) checkboxes[key].disabled = true;
   for (const key in buttons) buttons[key].disabled = true;
