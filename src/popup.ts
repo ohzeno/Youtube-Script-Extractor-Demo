@@ -1,16 +1,18 @@
 import { handleInputChange } from "./utils/storageUtils";
 import { copyTranscript, downloadTranscript } from "./utils/transcriptUtils";
-import { validatePage } from "./utils/tabUtils";
-import { getElementDict } from "./utils/domUtils";
+import { openDonationPage, validatePage } from "./utils/tabUtils";
+import { applyTheme, getElementDict } from "./utils/domUtils";
+import { ELEMENT_IDS, STORAGE_KEYS } from "./constants";
 
 async function initializeApp() {
   const checkboxes: InputElementDict = getElementDict<HTMLInputElement>([
-    "timestamp",
-    "line-break",
+    ELEMENT_IDS.CHECKBOXES.TIMESTAMP,
+    ELEMENT_IDS.CHECKBOXES.LINE_BREAK,
   ]);
   const buttons: ButtonElementDict = getElementDict<HTMLButtonElement>([
-    "copy-button",
-    "download-button",
+    ELEMENT_IDS.BUTTONS.COPY,
+    ELEMENT_IDS.BUTTONS.DOWNLOAD,
+    ELEMENT_IDS.BUTTONS.DONATE,
   ]);
 
   const isValidPage = await validatePage(checkboxes, buttons);
@@ -20,18 +22,29 @@ async function initializeApp() {
     checkbox.addEventListener("change", handleInputChange);
   });
 
-  buttons["copy-button"].addEventListener("click", () =>
+  buttons[ELEMENT_IDS.BUTTONS.COPY].addEventListener("click", () =>
     copyTranscript(checkboxes)
   );
 
-  buttons["download-button"].addEventListener("click", () =>
+  buttons[ELEMENT_IDS.BUTTONS.DOWNLOAD].addEventListener("click", () =>
     downloadTranscript(checkboxes)
   );
 
-  chrome.storage.local.get(["timestamp", "line-break"], (result) => {
-    checkboxes["timestamp"].checked = result["timestamp"];
-    checkboxes["line-break"].checked = result["line-break"];
-  });
+  buttons[ELEMENT_IDS.BUTTONS.DONATE].addEventListener(
+    "click",
+    openDonationPage
+  );
+
+  chrome.storage.local.get(
+    [STORAGE_KEYS.TIMESTAMP, STORAGE_KEYS.LINE_BREAK],
+    (result) => {
+      checkboxes[ELEMENT_IDS.CHECKBOXES.TIMESTAMP].checked =
+        result[STORAGE_KEYS.TIMESTAMP];
+      checkboxes[ELEMENT_IDS.CHECKBOXES.LINE_BREAK].checked =
+        result[STORAGE_KEYS.LINE_BREAK];
+    }
+  );
+  applyTheme();
 }
 
 initializeApp();

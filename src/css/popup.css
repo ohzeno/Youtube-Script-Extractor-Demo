@@ -7,8 +7,37 @@ html {
   font-size: 15px;
 }
 
+body[data-theme="christmas"] {
+}
+
+.snowflake {
+  position: absolute;
+  top: -15px;
+  background: white;
+  border-radius: 50%;
+  animation: fall linear infinite;
+  will-change: transform;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(calc(100vh + 15px))
+      translateX(calc(var(--wind-drift) * 100vh));
+  }
+}
+
 .container {
   padding: 1rem;
+  width: 155px;
+}
+
+#function-container {
+  margin: 0 auto;
   width: 150px;
 }
 
@@ -59,5 +88,72 @@ html {
 }
 
 .notification-warning {
-  background-color: #c57f28;
+  background-color: #c37b21;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notification-loading {
+  background-color: transparent;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#donation-wrapper {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #3f3f3f;
+}
+
+#donation-wrapper p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #a0a0a0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#donate-button {
+  font-size: 13px;
+  background-color: #ff5722;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 8px 4px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#donate-button[data-theme="christmas"] {
+}
+
+@keyframes glow {
+}
+
+#donate-button:hover {
+  background-color: #e64a19;
 }

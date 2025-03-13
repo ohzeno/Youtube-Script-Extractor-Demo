@@ -8,23 +8,29 @@
   </head>
   <body>
     <div id="container" class="container">
-      <div class="options">
-        <div class="checkbox">
-          <input type="checkbox" id="timestamp" />
-          <label for="timestamp">Timestamp</label>
+      <div id="function-container">
+        <div class="options">
+          <div class="checkbox">
+            <input type="checkbox" id="timestamp" />
+            <label for="timestamp">Timestamp</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="line-break" />
+            <label for="line-break">Line Break</label>
+          </div>
         </div>
-        <div class="checkbox">
-          <input type="checkbox" id="line-break" />
-          <label for="line-break">Line Break</label>
+        <div class="buttons">
+          <button id="copy-button" class="button">
+            <img src="../images/copy128.png" alt="copy" />
+          </button>
+          <button id="download-button" class="button">
+            <img src="../images/download128.png" alt="download" />
+          </button>
         </div>
       </div>
-      <div class="buttons">
-        <button id="copy-button" class="button">
-          <img src="../images/copy128.png" alt="copy" />
-        </button>
-        <button id="download-button" class="button">
-          <img src="../images/download128.png" alt="download" />
-        </button>
+      <div id="donation-wrapper">
+        <p>Found this helpful?</p>
+        <button id="donate-button">☕ Support with coffee</button>
       </div>
       <div id="notification"></div>
     </div>

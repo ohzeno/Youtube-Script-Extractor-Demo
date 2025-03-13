@@ -1,10 +1,6 @@
-import {
-  getInitialData,
-  getInitialSegments,
-  getSectionHeader,
-  getSegmentData,
-} from "./utils/youtubeUtils";
-import { sectionHeaderKey, segmentKey } from "./constants";
+import { isYouTubeShorts } from "./utils/youtubeUtils";
+import { TRANSCRIPT_TYPE } from "./constants";
+import { createVideoTranscriptDict } from "./utils/transcriptUtils";
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "getTranscriptDict")
@@ -15,21 +11,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 async function getTranscriptDict(): Promise<TranscriptDict> {
-  const { title, initialData } = await getInitialData();
-  const initialSegments = await getInitialSegments(initialData);
-  if (initialSegments.length === 0) return { title, transcript: [] };
-  let sectionNumber = 1;
-  const transcript = [];
-  for (const item of initialSegments) {
-    if (sectionHeaderKey in item) {
-      const sectionHeader = getSectionHeader(item);
-      transcript.push(`section ${sectionNumber++}: ${sectionHeader}`);
-    } else if (segmentKey in item) {
-      const timestampAndText: [string, string] = getSegmentData(item);
-      transcript.push(timestampAndText);
-    } else {
-      console.error("getTranscriptDict error", item);
-    }
+  const videoUrl: string = window.location.href;
+  let dataType: TranscriptType = TRANSCRIPT_TYPE.REGULAR;
+  if (isYouTubeShorts(videoUrl)) {
+    dataType = TRANSCRIPT_TYPE.SHORTS;
   }
-  return { title, transcript };
+  return createVideoTranscriptDict(videoUrl, dataType);
 }
